@@ -14,3 +14,9 @@
         p 
           - weight = data.settings.units.weight || 'kg'
           = product.weight.to_s + weight
+    
+    main.main-content
+      = yield
+    = partial 'partials/shared/footer'
+
+    = javascript_include_tag 'main', async: true
